@@ -1,6 +1,6 @@
 # API-BANCO
 
-## Seja bem-vindo à documentação da API API RESTful para um sistema bancário Digital da CUBOS! Esta API foi desenvolvida para fornecer funcionalidades bancárias básicas, permitindo que você realize as seguintes operações:
+## Seja bem-vindo à documentação da API RESTful para um sistema bancário Digital da CUBOS! Esta API foi desenvolvida para fornecer funcionalidades bancárias básicas, permitindo que você realize as seguintes operações:
 
 <br/> 
 
