@@ -1,5 +1,5 @@
 module.exports = {
-    numeroDaconta: 3,
+    numeroDaconta: 1,
     banco: {
         nome: 'Cubos Bank',
         numero: '123',

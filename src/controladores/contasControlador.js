@@ -8,7 +8,10 @@ const listagemDeContas = (req, res) => {
 const criarConta = (req, res) => {
     const { nome, cpf, data_nascimento, telefone, email, senha } = req.body;
 
-    verificarCampoObrigatorio(req, res)
+    const camposObrigatoriosFaltantes = verificarCampoObrigatorio(req)
+    if (camposObrigatoriosFaltantes) {
+        return res.status(400).json({ mensagem: `${camposObrigatoriosFaltantes} é obrigatório.` })
+    }
 
     if (db.contas.some((conta) => conta.usuario.cpf === cpf)) {
         return res.status(400).json({ "mensagem": "Já existe uma conta com o cpf ou e-mail informado!" });
@@ -41,7 +44,10 @@ const atualizarConta = (req, res) => {
     const numero = req.params.numeroConta
     let { cpf, email } = req.body;
 
-    verificarCampoObrigatorio(req, res);
+    const camposObrigatoriosFaltantes = verificarCampoObrigatorio(req)
+    if (camposObrigatoriosFaltantes) {
+        return res.status(400).json({ mensagem: `${camposObrigatoriosFaltantes} é obrigatório.` })
+    }
 
     const conta = verificarContaExistente(numero);
 
@@ -131,8 +137,10 @@ const verificarCampoObrigatorio = (req, res) => {
     const campoFaltante = camposObrigatorio.find((campo) => !campo.nomeParametro)
 
     if (campoFaltante) {
-        return res.status(400).json({ mensagem: `${campoFaltante.nomeDoCampo} é obrigatório.` })
+        return campoFaltante.nomeDoCampo
     }
+
+    return false
 }
 
 const verificarContaExistente = (numero) => {
