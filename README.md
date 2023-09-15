@@ -2,6 +2,37 @@
 
 ## Seja bem-vindo à documentação da API RESTful para um sistema bancário Digital da CUBOS! Esta API foi desenvolvida para fornecer funcionalidades bancárias básicas, permitindo que você realize as seguintes operações:
 
+1) Listar Contas
+ 2)  Criar conta bancária
+ 3)  Atualizar conta bancária
+ 4)  Excluir conta bancária
+ 5)  Realizar depósito
+ 6)  Realizar saque
+ 7) Realizar transferência
+ 8) Verificar Saldo
+ 9) Verificar Extrato
+
+## Run
+
+Para executar este projeto localmente, você precisa:
+
+- Faça um clone do projeto
+```bash
+git clone https://github.com/Daian4/API-BANCO.git
+```
+
+- Instalar dependências
+
+```shell
+npm install
+```
+
+- Inicialize o servidor local: 
+
+```shell
+npm run start
+```
+
 <br/> 
 
 ### Criar uma nova conta bancária:
