@@ -161,3 +161,17 @@ Descrição: Receba um extrato bancário detalhado de uma conta bancária especi
 
     -   numero_conta
     -   senha
+
+  <br/> 
+
+## Tecnologias Ultilizadas 
+
+[![My Skills](https://skillicons.dev/icons?i=javascript,nodejs,express,git,github&perline=3)](https://skillicons.dev)
+
+  <br/> 
+
+## Contato
+Se você tiver dúvidas ou precisar entrar em contato, você pode me encontrar em daianalimaep@gmail.com
+
+ ## Licença
+[MIT](LICENSE)
